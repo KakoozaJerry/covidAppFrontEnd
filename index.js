@@ -1,6 +1,10 @@
 const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const homePage = require('./routes/homepage');
+
+
+
 
 // Instantiations
 const app = express();
@@ -31,6 +35,6 @@ app.get('*', (req, res)=> {
 
 
 
-app.listen(8000, () => console.log('listening on port 3000'));
+app.listen(8000, () => console.log('listening on port 8000'));
 
 
