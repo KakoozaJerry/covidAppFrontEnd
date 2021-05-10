@@ -1,0 +1,22 @@
+extends layout2
+block content
+    div.row.justify-content-center
+        div.col-md-6
+            div.card.text-center.forma
+                div.card-header
+                        h4.card-title LOGIN 
+                div.card-body
+                    form(method="POST" action='/login')
+                        div.form-row
+                            div.col.form-group
+                                label Email
+                                input.form-control.form-control-sm.formsinput(name="email")
+                        div.form-row
+                            div.col.form-group
+                                label Password
+                                input.form-control.form-control-sm.formsinput(type="password" name="password")
+                        div.form-row
+                            div.col.form-group
+                                button.btn.btn-primary.btn-block.formsinput Login
+                            div.col.form-group
+                                a.formsinput(class='button btn btn-outline-secondary btn-block', href='/signup') Register

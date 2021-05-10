@@ -1,0 +1,45 @@
+extends layout2
+block content
+    header.card-header
+        h4.card-title Register Radiography Personnel
+    div.card.text-white.bg-dark.mb-3
+        div.card-body 
+            form(method="POST" action='/signup' id = "signup")
+                div.form-row
+                    div.form-field.col.form-group
+                        label First name 
+                        input.form-control(name="firstname" id = "firstname" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false")
+                        small
+                    div.form-field.col.form-group
+                        label Last name
+                        input.form-control(name="lastname" id = "lastname" )
+                        small
+                    div.form-field.col.form-group
+                        label Email
+                        input.form-control(name="email" id = "email")
+                        small
+                div.form-row
+                    div.form-field.col.form-group
+                        label Username 
+                        input.form-control( name="username" id = "username")
+                        small
+                div.form-row
+                    div.form-field.col.form-group
+                        label Password 
+                        input.form-control(type="password" name="password" id = "password")
+                        small
+                    div.form-field.col.form-group
+                        label Confirm Password 
+                        input.form-control(type="password" name="confirm-password" id = "confirm-password")
+                        small
+                div.form-row
+                    div.col.form-group
+                        button.btn.btn-primary.btn-block(type="submit") Register
+                div.form-row
+                    div.col
+                        h4 Are you already registered?
+                    div.col
+                        a.btn.links.border-warning.text-right(href='/login' style="color:white;")
+                            i.bi.bi-box-arrow-in-down(style="font-style:normal;")  Click here to login
+            
+                        

@@ -1,43 +1,30 @@
-doctype html
-html
-    head
-        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css")
-        link(rel="stylesheet", href="https://fonts.google.com/sr?family=Courier+New+OS&token=MT")
-        link(rel='stylesheet', href='/css/style.css')
-        title= title
-               
-    body
-        div.container
-            h1 Accounts
+extends layout
+block content
+    h1 Models
+    div.row
+        div.col-8.border(style = "height:500px;")
+            div.card(style = "width: 18rem;")
+                img(src="/images/set1.jpg", alt="", srcset="")
+        div.col-4.border 
+            h3.text-center Description
+            ul 
+                li A-lines
+                li B-lines, consolidations
+                li B-lines, effusion
+                li B-lines,Consolidation,Effusion
+                li B-lines
+                li Consolidation, effusion
+                li Consolidations
+                li Effusion
+                    
+    div.row
+        div.col-8
             div.row
-                div.col-8.border(style = "height:500px;")
-                    div.card(style = "width: 18rem;")
-                        img(src="/images/set1.jpg", alt="", srcset="")
-                div.col-4.border 
-                    h3.text-center Description
-                    ul 
-                        li A-lines
-                        li B-lines, consolidations
-                        li B-lines, effusion
-                        li B-lines,Consolidation,Effusion
-                        li B-lines
-                        li Consolidation, effusion
-                        li Consolidations
-                        li Effusion
-                            
-            div.row
-                div.col-8
-                    div.row
-                        div.col-9
-                            button.btn.btn-primary
-                                i.bi.bi-arrow-left  Back
-                        div.col-3
-                            button.btn.btn-primary Next 
-                                i.bi.bi-arrow-right 
-                div.col-4
+                div.col-9
+                    button.btn.btn-primary
+                        i.bi.bi-arrow-left  Back
+                div.col-3
+                    button.btn.btn-primary Next 
+                        i.bi.bi-arrow-right 
+        div.col-4
             
-    footer.row.justify-content-center.forma
-        div.container
-            block footer
-                div.col-md-12 © Kakooza Jerry 
