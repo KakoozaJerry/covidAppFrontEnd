@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const homePage = require('./routes/homepage');
 const login = require('./routes/login');
 const Registration = require('./models/Registration')
-
+const fetch = require('fetch-base64');
 
 
 // Instantiations
@@ -66,6 +66,20 @@ passport.deserializeUser(Registration.deserializeUser());
 app.use('/', homePage);
 app.use('/', login);
 
+// Predict
+app.get('/predict', (req, res)=> {
+  fetch.local('/public/images/set.jpg').then((data) => {
+    // data[0] contains the raw base64-encoded jpg
+  }).catch((reason) => {});
+   
+  fetch.remote('http://domain.com/to/image.jpg').then((data) => {
+    // data[1] contains base64-encoded jpg with MimeType
+  }).catch((reason) => {});
+   
+  fecth.auto('/remote/or/local/path/image.gif').then((data) => {
+   
+  }).catch((reason) => {});
+})
 
 
 
